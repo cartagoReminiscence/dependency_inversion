@@ -18,6 +18,13 @@ class LightBulb(Switch):
     def turn_off(self):
         print(f"LightBulb: turned off...")
 
+class Fan(Switch):
+    def turn_on(self):
+        print(f"Fan: turned on!!!")
+
+    def turn_off(self):
+        print(f"Fan: turned off!!!")
+
 class ElectricPowerSwitcher:
     s: Switch
     on: bool
@@ -34,7 +41,8 @@ class ElectricPowerSwitcher:
             self.s.turn_off()
             self.on = True
 
-s = LightBulb()
+# s = LightBulb()
+s = Fan()
 switch = ElectricPowerSwitcher(s, False)
 switch.press()
 switch.press()
